@@ -5,6 +5,10 @@ from flask_jwt_extended import jwt_required, get_jwt_identity
 
 route_bp = Blueprint('main', __name__)
 
+@route_bp.route('/')
+def home():
+
+    return jsonify({"status": "success", "message": "api connected successfully"}), 200
 
 @route_bp.route('/api/users/<string:id>', methods=['GET'])
 @jwt_required()
