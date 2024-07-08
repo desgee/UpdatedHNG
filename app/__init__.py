@@ -1,5 +1,6 @@
 # app/__init__.py
 from flask import Flask
+import os
 from flask_sqlalchemy import SQLAlchemy
 from flask_jwt_extended import JWTManager
 
@@ -10,7 +11,7 @@ def create_app():
     app = Flask(__name__)
     
     app.config['SECRET_KEY'] = 'your-secret-key'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres.sucilzhqzugjcucykwmo:rT12dIOsWoqV2wln@aws-0-eu-central-1.pooler.supabase.com:6543/postgres'
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URI")
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['JWT_SECRET_KEY'] = 'your_jwt_secret_key'
 
