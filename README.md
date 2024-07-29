@@ -2,7 +2,19 @@
 This is a Python API using Flask Framework that Connects the application to a Postgres database server. ORM like SQLAlchemy was used
 
 **Base Endpoint**
-(https://user-auth-org.vercel.app)
+(https://updated-hng.vercel.app)
+
+````
+Endpoints implemented:
+[POST]   https://updated-hng.vercel.app/auth/register
+[POST]   https://updated-hng.vercel.app/auth/login
+[POST]	https://updated-hng.vercel.app/api/organisations[PROTECTED]
+[GET]   https://updated-hng.vercel.app/api/users/:id
+[GET]	https://updated-hng.vercel.app/api/organisations/:orgId[PROTECTED]
+[POST]  https://updated-hng.vercel.app/api/organisations/:orgId/users[PROTECTED]
+[GET] https://updated-hng.vercel.app/api/organisations[PROTECTED]
+````
+
 
 **Register Endpoint [POST]**
 
